@@ -1,0 +1,16 @@
+{% extends 'online_store/base.html' %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+				<h2>Відгук про товар</h2>
+				<h4>{{goods.name}}</h4>
+
+
+
+				<p class="link-read-post"><a href="product_review">Відправити</a></p>
+{% endif %}
+
+			<div class="clear"></div>
+
+{% endblock %}

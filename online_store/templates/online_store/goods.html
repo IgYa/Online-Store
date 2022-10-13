@@ -1,0 +1,21 @@
+{% extends 'online_store/base.html' %}
+
+{% block content %}
+
+
+<ul class="list-articles">
+	{% for g in goods %}
+			<li>
+{% if g.photo %}
+	<p><img class="img-article-left thumb" width="100" src={{g.photo.url}}></p>
+{% endif %}
+				<h4><a href="{% url 'goods_id' g.pk %}">{{g.name}} - {{g.price}} грн</a></h4>
+
+			<div class="clear"></div>
+
+			</li>
+	{% endfor %}
+</ul>
+{% endblock %}
+
+<!--<p><img class="img-article-left thumb" src="{{g.photo.url}}"></p>-->

@@ -1,0 +1,25 @@
+{% extends 'online_store/base.html' %}
+
+{% block content %}
+
+{% if goods.photo %}
+	<p><img class="img-article-left" src={{goods.photo.url}}></p>
+{% endif %}
+				<h2>{{goods.name}}</h2>
+				<p>{{goods.description}}</p>
+				<p>{{goods.price}} грн</p>
+{% if request.user.is_authenticated %}
+
+<form method="POST" action="/add_basket/" />
+		{% csrf_token %}
+		<input type="hidden" value="{{user.id}}" name="user_id"/>
+	    <input type="hidden" value="{{goods.id}}" name="goods_id"/>
+	    <input type="submit" value="У кошик" name="У кошик"/>
+</form>
+
+{% endif %}
+
+<!--			<div class="clear"></div>-->
+
+{% endblock %}
+

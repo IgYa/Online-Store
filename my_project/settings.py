@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = "CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be used, if set, instead)."
+SECRET_KEY = "django-insecure-j%*y*h4%p!k^x6w7&%4ucf7g*yo2#s)42tfxjr#-llxc4^qc%g"
 
 # if 'SECRET_KEY' in os.environ:
 #    SECRET_KEY = os.environ["SECRET_KEY"]
@@ -33,8 +33,8 @@ SECRET_KEY = "CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be us
 #if IS_HEROKU:
 #    ALLOWED_HOSTS = ["*"]
 #else:
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['ihoryakunin.pythonanywhere.com',]
+# ALLOWED_HOSTS = []
 # SECURITY WARNING: don't run with debug turned on in production!
 #if not IS_HEROKU:
 #    DEBUG = True
@@ -139,7 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "static"
+#STATIC_ROOT = BASE_DIR / "static"
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # STATICFILES_DIRS = []
 
@@ -151,6 +151,8 @@ STATIC_ROOT = BASE_DIR / "static"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/ihoryakunin/Online-Store/online_store/static'
+MEDIA_ROOT = '/home/ihoryakunin/Online-Store/media'
 
